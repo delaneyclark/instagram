@@ -3,6 +3,11 @@ $(document).ready(function(){
         //getting the data from instagram
         $.getJSON("http://cooper-union-instagram-proxy.herokuapp.com/search/tag/blizzcon?count=100", function(response){
 
+          console.log(response);
+        for(var i=0; i<response.length; i++) {
+          $("body").append("<img src="+response[i].images.thumbnail.url+" />");
+        }
+
 
           //create the placeholder for valid images
           var instagramPositions = [];
