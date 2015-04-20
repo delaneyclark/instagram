@@ -5,7 +5,7 @@ $(document).ready(function(){
 
           console.log(response);
         for(var i=0; i<response.length; i++) {
-          $("body").append("<img src="+response[i].images.thumbnail.url+" />");
+          $("p").append("<img src="+response[i].images.thumbnail.url+" />");
         }
 
 
